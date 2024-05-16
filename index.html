@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="phone.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/3e83da74ef.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="section container-xxl">
+      <div class="box">
+        <div class="screen">
+          <input type="text" class="screenCopy" readonly id="screenCopy" />
+          <input type="text" readonly id="display" placeholder="0" />
+        </div>
+
+        <div class="button-main">
+          <div class="my-row1">
+            <button class="clear" onclick="clearValue()">AC</button>
+            <button id="deleteValue" onclick="deleteValue()" class="deleteOne">
+              <i class="delete fa-solid fa-delete-left"></i>
+            </button>
+            <button class="modulus" onclick="valueGet('%')">%</button>
+            <button class="divide" onclick="valueGet('÷')">÷</button>
+          </div>
+
+          <div class="my-row2">
+            <button onclick="valueGet(8)">8</button>
+            <button onclick="valueGet(7)">7</button>
+            <button onclick="valueGet(9)">9</button>
+            <button class="multiply" onclick="valueGet('x')">x</button>
+          </div>
+
+          <div class="my-row3">
+            <button onclick="valueGet(4)">4</button>
+            <button onclick="valueGet(5)">5</button>
+            <button onclick="valueGet(6)">6</button>
+            <button class="minus" onclick="valueGet('-')">-</button>
+          </div>
+
+          <div class="my-row4">
+            <button onclick="valueGet(1)">1</button>
+            <button onclick="valueGet(2)">2</button>
+            <button onclick="valueGet(3)">3</button>
+            <button class="plus" onclick="valueGet('+')">+</button>
+          </div>
+
+          <div class="my-row5">
+            <button class="zero" onclick="valueGet('0')">0</button>
+            <button class="dot" onclick="valueGet('.')">.</button>
+            <button class="equal" onclick="results()">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
